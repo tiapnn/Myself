@@ -20,10 +20,18 @@ class MattiaPenna {
     }
   }
 
+
   function clearMind (): void {
     let mind = this.MindBin;
     mind.clear();
   }
+
+  function chill (): void {
+    this.breathDeeply()
+    this.clearMind()
+    console.log("Nothing really matter")
+  }
+
 
 
 }
