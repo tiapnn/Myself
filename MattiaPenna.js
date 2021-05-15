@@ -9,6 +9,28 @@ class MattiaPenna {
     this.nationality = Italian;
   }
 
+  function ogniLasciataEPersa (event) {
+    if (event.opportunity && event.interest) {
+      console.info("Ogni lasciata è persa");
+      console.info("If I don't do this I'll never know");
+      this.isInAlteredState = true;
+      let confidence = this.chill();
+      return this.sayHello(event, confidence);
+    }
+  }
+
+  function sayHello (e: Event, c: Confidence) {
+    this.mount(c)
+    switch(e.interactionLang) {
+      case 'it':
+        return 'Ciao!';
+      case 'es':
+        return 'Hola!';
+      default:
+        return 'Hello!';
+    }
+  }
+
   function resist (): Courage {
     if (this.isSad && this.feelDiscomfort) {
       console.group();
