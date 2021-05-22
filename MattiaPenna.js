@@ -1,12 +1,28 @@
 import Courage;
 import Confidence;
 
+const CORE_VALUES = [
+  honesty,
+  strength,
+  action
+];
+
 class MattiaPenna {
 
   constructor() {
     this.name = Mattia;
     this.yearOfBirth = 1994;
     this.nationality = Italian;
+    this.mindBin = New Mind(CORE_VALUES);
+  }
+
+  function mary () {
+    let mind = this.mindBin;
+    mind.addThoughtListener('Mary', event => {
+      console.log(event.thoughtOrigin);
+      let currentMindset = "Fun, Lust and Love";
+      mind.OverrideLastThought(currentMindset);
+    })
   }
 
   function ogniLasciataEPersa (event) {
@@ -51,7 +67,7 @@ class MattiaPenna {
   }
 
   function clearMind (): void {
-    let mind = this.MindBin;
+    let mind = this.mindBin;
     mind.clear();
   }
 
